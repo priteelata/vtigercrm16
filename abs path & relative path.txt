@@ -1,0 +1,123 @@
+Absolute Xpath ==
+ 1.flipkart==========================
+
+ for text=====
+
+ mobile & tablets		 html/body/div/div/div[2]/div/div/div[2]/a/div[2]
+ electronics 			html/body/div/div/div[2]/div/div/div[3]/a/div[2] 
+tv & appliances			 html/body/div/div/div[2]/div/div/div[4]/a/div[2] 
+fashion 			html/body/div/div/div[2]/div/div/div[5]/a/div[2]
+ beauty 			html/body/div/div/div[2]/div/div/div[6]/a/div[2]
+ home furniture 		html/body/div/div/div[2]/div/div/div[7]/a/div[2] 
+flights 			html/body/div/div/div[2]/div/div/div[8]/a/div[2] 
+grocery 			html/body/div/div/div[2]/div/div/div[9]/a/div[2]
+ 
+for image=
+
+ mobile & tablets      		 html/body/div/div/div[2]/div/div/div[2]/a/div[1]/div/img 
+electronics           		 html/body/div/div/div[2]/div/div/div[3]/a/div[1]/div/img 
+tv & appliances      		 html/body/div/div/div[2]/div/div/div[4]/a/div[1]/div/img 
+fashion              		html/body/div/div/div[2]/div/div/div[5]/a/div[1]/div/img 
+beauty 				html/body/div/div/div[2]/div/div/div[6]/a/div[1]/div/img 
+home & furniture 		html/body/div/div/div[2]/div/div/div[7]/a/div[1]/div/img 
+flights 			html/body/div/div/div[2]/div/div/div[8]/a/div[1]/div/img 
+grocery 			html/body/div/div/div[2]/div/div/div[9]/a/div[1]/div/img
+
+Relative xpath==
+1.flipkart========================
+
+for text=====
+
+ mobile & tablets		 //div[2]/a/div[2]
+ electronics 			//div[3]/a/div[2] 
+tv & appliances			 //div[4]/a/div[2] 
+fashion 			//div[5]/a/div[2] 
+beauty 				//div[6]/a/div[2]
+ home furniture 		//div[7]/a/div[2] 
+flights				 //div[8]/a/div[2] 
+grocery 			//div[9]/a/div[2]
+
+
+for image=
+
+ mobile & tablets      		 //div[2]/a/div[1]/div/img 
+electronics           		 //div[3]/a/div[1]/div/img 
+tv & appliances      		 //div[4]/a/div[1]/div/img 
+fashion              		//div[5]/a/div[1]/div/img 
+beauty 				//div[6]/a/div[1]/div/img 
+home & furniture 		//div[7]/a/div[1]/div/img 
+flights 			//div[8]/a/div[1]/div/img 
+grocery 			//div[9]/a/div[1]/div/img
+
+
+                                                    ==============xpath by attribute============
+ mobile & tablets	//img[@alt='Mobiles & Tablets']
+electronics 		//img[@alt='Electronics']
+tv & appliances		//img[@alt='TVs & Appliances']
+fashion			//img[@alt='Fashion']
+beauty 			//img[@alt='Beauty']
+home & furniture	//img[@alt='Home & Furniture']
+flights 		//img[@alt='Flights']
+grocery			//img[@alt='Grocery']
+
+
+AND OR NOT operations============
+<html>
+  </head>
+   <body>
+         <input type="text" value="A">
+	<input type="text" value="B">
+	<input type="submit" value="A">
+   </body>
+<html>
+
+
+//input[@value='B']--------------------B
+//input[@type='submit']---------------a
+//input[@type='text']-------------AB
+//input[@value='A']---------------Aa
+//input[@type='text' and @value='A']--------------------A
+//input[@value='B' or @type='submit']------------Ba
+
+
+                                  =======================x-path by text===============
+                   flipkart====
+Grocery			//div[text()='Grocery']
+
+mobiles			//div[text()='Mobiles']
+
+Appliances		//div[text()='Appliances']
+
+travel			//div[text()='Travel']
+
+top offers		//div[text()='Top Offers']
+
+
+
+
+                          =================xpath by independent & dependent==========
+
+1.buddhist train==========fixed element
+2.buddhisttrain@irctc.com=======dynamic element
+    //td[text()='Buddhist train']/..//td[@data-title='mail']
+
+
+
+
+1.buddhist train==========fixed element
+2.+91 9717648718===========dynamic element
+//td[text()='Buddhist train']/..//td[@data-title='helpline']
+
+
+
+realme aquablue==============
+
+//div[text()='realme C33 2023 (Aqua Blue, 64 GB)']/../..//div[@class='_30jeq3 _1_WHN1']
+
+realme nightsea====
+//div[text()='realme C33 2023 (Night Sea, 64 GB)']/../..//div[@class='_30jeq3 _1_WHN1']
+
+
+                     ================xpath by group index===========
+
+(//div[text()='realme 9 5G SE (Azure Glow, 128 GB)'])[1]/../..//div[@class='_30jeq3 _1_WHN1']
